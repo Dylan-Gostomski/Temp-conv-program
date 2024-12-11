@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Conversion</h1>
+        <form>
+            <div class="input-section">
+                <label for="textBox">Enter Temperature:</label>
+                <input type="number" id="textBox" placeholder="0" />
+            </div>
+            
+
+            <div class="radio-section">
+                <input type="radio" id="toFahrenheit" name="unit" />
+                <label for="toFahrenheit">Celsius ➡ Fahrenheit</label><br />
+                <input type="radio" id="toCelsius" name="unit" />
+                <label for="toCelsius">Fahrenheit ➡ Celsius</label>
+            </div>
+
+            <button type="button" onclick="convert()">Convert</button>
+        </form>
+
+        <div class="slider-section">
+            <label for="tempSlider">Adjust Temperature:</label>
+            <input type="range" id="tempSlider" min="-50" max="100" value="0" oninput="updateSlider(this.value)" />
+            <div class="slider-labels">
+                <span>❄</span>
+                <span>🌡</span>
+                <span>🔥</span>
+            </div>
+        </div>
+
+        <p id="result">Select a unit and input a value</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
